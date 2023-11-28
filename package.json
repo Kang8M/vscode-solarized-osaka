@@ -1,0 +1,26 @@
+{
+  "name": "solarized-osaka",
+  "displayName": "solarized-osaka",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "solarized-osaka",
+        "uiTheme": "vs-dark",
+        "path": "./themes/solarized-osaka-color-theme.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "hsl": "^0.1.1",
+    "util": "^0.12.5"
+  }
+}
