@@ -1,0 +1,1 @@
+# vscode-solarized-osaka
