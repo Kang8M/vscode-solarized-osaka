@@ -12,7 +12,8 @@ function hsl(h, s, l) {
     return `#${f(0)}${f(8)}${f(4)}`;
 }
 
-const colorList = {
+// colorList
+const cl = {
     none : "NONE",
     base04 : hsl(192, 100, 5),
     base03 : hsl(192, 100, 11),
@@ -78,7 +79,8 @@ const colorList = {
     fg : hsl(186, 8, 55),
 };
 
-const tokenColorsKeyMap = {
+// tckm is tokenColorsKeyMap
+const tckm = {
     Comment : 0,
     Variables: 1,
     Colors: 2,
@@ -160,14 +162,115 @@ function mappingTokenColors(properties = [], colors = []) {
 
 mappingColors(
     ["editor.background", "editor.foreground", "activityBarBadge.background", "activityBarBadge.background"],
-    [colorList.bg, colorList.fg, colorList.bg, colorList.bg]
+    [cl.bg, cl.fg, cl.bg, cl.bg]
 );
 
 // console.log('adfamkldsfm', jsonData.tokenColors[1].settings.foreground);
 
 mappingTokenColors(
-    [tokenColorsKeyMap.Variables],
-    [colorList.bg]
+    [
+        tckm.Comment,
+        tckm.Variables,
+        // tckm.Colors,
+        // tckm.Invalid,
+        tckm.KeywordStorage,
+        tckm.OperatorMisc,
+        tckm.Tag, // not sure for this
+        tckm.FunctionSpecialMethod,
+        // tckm.BlockLevelVariables,
+        // tckm.OtherVariableStringLink,
+        tckm.NumberConstantFunctionArgumentTagAttributeEmbedded,
+        tckm.StringSymbolsInheritedClassMarkupHeading,
+        tckm.ClassSupport,
+        tckm.EntityTypes,
+        // tckm.CSSClassAndSupport,
+        // tckm.SubMethod,
+        tckm.LanguageMethods,
+        // tckm.EntityNameMethodJs,
+        // tckm.MetaMethodJs,
+        // tckm.Attributes,
+        // tckm.HTMLAttributes,
+        // tckm.CSSClasses,
+        // tckm.CSSIDs,
+        tckm.Inserted,
+        tckm.Deleted,
+        tckm.Changed,
+        // tckm.RegularExpressions,
+        tckm.EscapeCharacters,
+        // tckm.URL,
+        tckm.Decorators,
+        tckm.ES7BindOperator,
+        // tckm.JSONKeyLevel0,
+        // tckm.JSONKeyLevel1,
+        // tckm.JSONKeyLevel2,
+        // tckm.JSONKeyLevel3,
+        // tckm.JSONKeyLevel4,
+        // tckm.JSONKeyLevel5,
+        // tckm.JSONKeyLevel6,
+        // tckm.JSONKeyLevel7,
+        // tckm.JSONKeyLevel8,
+        tckm.MarkdownPlain,
+        tckm.MarkdownMarkupRawInline,
+        tckm.MarkdownMarkupRawInlinePunctuation,
+        tckm.MarkdownHeading,
+        tckm.MarkupItalic,
+        tckm.MarkupBold,
+        tckm.MarkupBoldItalic,
+        tckm.MarkupUnderline,
+        tckm.MarkdownBlockquote,
+        tckm.MarkupQuote,
+        tckm.MarkdownLink,
+        tckm.MarkdownLinkDescription,
+        tckm.MarkdownLinkAnchor,
+        tckm.MarkupRawBlock,
+        tckm.MarkdownRawBlockFenced,
+        tckm.MarkdownFencedBodeBlock,
+        tckm.MarkdownFencedBodeBlockVariable,
+        tckm.MarkdownFencedLanguage,
+        tckm.MarkdownSeparator,
+        tckm.MarkupTable,
+    ],
+    [
+        cl.base01,
+        cl.base0,
+        // cl.base0,
+        // cl.base0,
+        cl.green500,
+        cl.green500,
+        cl.orange500,
+        cl.blue500,
+        // cl.blue500,
+        // cl.blue500,
+        cl.cyan500,
+        cl.cyan500,
+        cl.yellow500,
+        cl.yellow500,
+        // cl.yellow500,
+        // cl.yellow500,
+        cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        cl.green500,
+        cl.yellow500,
+        cl.red500,
+        // cl.red500,
+        cl.orange700,
+        // cl.orange700,
+        cl.fg,
+        cl.green500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+        // cl.orange500,
+    ]
 )
 
 const jsonString = JSON.stringify(jsonData);
